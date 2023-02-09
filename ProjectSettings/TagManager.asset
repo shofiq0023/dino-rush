@@ -41,3 +41,24 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Foggy trees
+    uniqueID: 3348594881
+    locked: 0
+  - name: God Rays
+    uniqueID: 4126638991
+    locked: 0
+  - name: Big Trees
+    uniqueID: 2234652033
+    locked: 0
+  - name: Fog
+    uniqueID: 2159907955
+    locked: 0
+  - name: Grass
+    uniqueID: 3220436467
+    locked: 0
+  - name: Ground
+    uniqueID: 3949037617
+    locked: 0
+  - name: Player
+    uniqueID: 4283461515
+    locked: 0
