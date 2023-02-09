@@ -11,12 +11,8 @@ public class FloorSpawner : MonoBehaviour
     [SerializeField] float spawnRate;
     [SerializeField] float heighOffset;
 
-    // Start is called before the first frame update
-    void Start() {
-        
-    }
+    void Start() {}
 
-    // Update is called once per frame
     void FixedUpdate() {
         if(timer < spawnRate)
         {
@@ -34,5 +30,9 @@ public class FloorSpawner : MonoBehaviour
         float lowestPoint = transform.position.y + heighOffset;
 
         Instantiate(floor, new Vector3(transform.position.x, Random.Range(lowestPoint, highestPoint), 0), gameObject.transform.rotation);
+    }
+
+    public void DecreaseSpawnRate(float rate) {
+        spawnRate -= rate;
     }
 }

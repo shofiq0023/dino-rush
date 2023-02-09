@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Logic
   layers:
   - Default
   - TransparentFX
@@ -41,6 +42,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Background
+    uniqueID: 2716023173
+    locked: 0
   - name: Foggy trees
     uniqueID: 3348594881
     locked: 0
@@ -61,4 +65,7 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 4283461515
+    locked: 0
+  - name: UI
+    uniqueID: 3277505887
     locked: 0

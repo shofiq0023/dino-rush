@@ -2,20 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FloorScript : MonoBehaviour
-{
+public class FloorScript : MonoBehaviour {
 
-    [SerializeField]
-    float moveSpeed;
-    
-    [SerializeField]
-    float speedLimit;
-
+    private float moveSpeed;
     private float deadZone = -5;
+    private float speedLimit;
+    private LogicManager logicManager;
 
     // Start is called before the first frame update
     void Start() {
-        
+        logicManager = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicManager>();
+        moveSpeed = logicManager.floorMoveSpeed;
+        speedLimit = logicManager.speedLimit;
     }
 
     // Update is called once per frame
