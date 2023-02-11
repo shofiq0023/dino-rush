@@ -4,10 +4,12 @@ using UnityEngine;
 using TMPro;
 
 public class LogicManager : MonoBehaviour {
-    public TextMeshProUGUI tmp;
+    public TextMeshProUGUI scoreText;
+    public TextMeshProUGUI pointText;
     private int score = 0;
     private float timer = 0;
     private float timerLimit = 0.7f;
+    private int point = 0;
 
     public float floorMoveSpeed;
     public float speedLimit;
@@ -31,7 +33,7 @@ public class LogicManager : MonoBehaviour {
 
     void AddScore() {
         score += 1;
-        tmp.text = score.ToString();
+        scoreText.text = score.ToString();
         CheckScoreAndIncreaseSpeed();
     }
 
@@ -46,11 +48,8 @@ public class LogicManager : MonoBehaviour {
         }
     }
 
-    public void PauseGame() {
-        Time.timeScale = 0;
-    }
-
-    public void ResumeGame() {
-        Time.timeScale = 1;
+    public void AddPoint(int n) {
+        point += n;
+        pointText.text = point.ToString();
     }
 }

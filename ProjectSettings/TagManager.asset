@@ -63,6 +63,9 @@ TagManager:
   - name: Ground
     uniqueID: 3949037617
     locked: 0
+  - name: Foods
+    uniqueID: 2016642471
+    locked: 0
   - name: Player
     uniqueID: 4283461515
     locked: 0

@@ -6,6 +6,7 @@ public class PlayerScript : MonoBehaviour {
     public Rigidbody2D rb;
     public float jumpPower = 10;
     public int jumpLimit;
+    private bool isDead = false;
 
     [SerializeField] LayerMask groundLayer;
     [SerializeField] Transform feet;
@@ -17,7 +18,7 @@ public class PlayerScript : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        if ((jumpCount < jumpLimit) && Input.GetKeyDown(KeyCode.Space)) {
+        if ((jumpCount < jumpLimit) && Input.GetKeyDown(KeyCode.Space) && Time.timeScale > 0 && !isDead) {
             jump();
         }
     }
@@ -29,5 +30,9 @@ public class PlayerScript : MonoBehaviour {
 
     public void ResetJump() {
         jumpCount = 0;
+    }
+
+    public void ActiveDeath() {
+        isDead = true;
     }
 }
