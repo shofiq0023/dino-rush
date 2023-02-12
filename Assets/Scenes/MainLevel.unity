@@ -1730,7 +1730,7 @@ GameObject:
   - component: {fileID: 924762477}
   - component: {fileID: 924762478}
   - component: {fileID: 924762479}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Feet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
