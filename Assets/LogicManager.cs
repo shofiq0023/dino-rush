@@ -6,7 +6,7 @@ using TMPro;
 public class LogicManager : MonoBehaviour {
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI pointText;
-    private int score = 0;
+    public int score = 0;
     private float timer = 0;
     private float timerLimit = 0.7f;
     private int point = 0;

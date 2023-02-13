@@ -2,21 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FoodScript : MonoBehaviour {
-    private LogicManager logicManager;
+public class EnemyScript : MonoBehaviour{
+    private GameManager gameManager;
 
-    void Start() {
-        logicManager = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicManager>();
+    private void Start() {
+        gameManager = GameObject.FindGameObjectWithTag("Manager").GetComponent<GameManager>();
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.gameObject.layer == 3) {
-            logicManager.AddPoint(1);
-            Destroy(gameObject);
+            gameManager.GameOver();
         }
     }
 
-    public void SpawnFood(bool flag) {
+    public void SpawnEnemy(bool flag) {
         if (flag == true) {
             gameObject.SetActive(flag);
         } else {

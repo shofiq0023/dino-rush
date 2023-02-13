@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Logic
+  - Manager
   layers:
   - Default
   - TransparentFX
@@ -66,7 +67,7 @@ TagManager:
   - name: Foods
     uniqueID: 2016642471
     locked: 0
-  - name: Player
+  - name: Player & enemy
     uniqueID: 4283461515
     locked: 0
   - name: UI
