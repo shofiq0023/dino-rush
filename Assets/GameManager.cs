@@ -23,9 +23,12 @@ public class GameManager : MonoBehaviour {
         pauseMenu.SetActive(false);
     }
 
-    public void GameOver() {
+    public void GameOver(int score, int point) {
         gameOverScreen.SetActive(true);
         playerScript.ActiveDeath();
+        SaveInformation(score, point);
+        Debug.Log("Score: " + score + ", Point: " + point);
+
         Time.timeScale = 0;
     }
 
@@ -36,5 +39,10 @@ public class GameManager : MonoBehaviour {
 
     public void MainMenu() {
         SceneManager.LoadScene(mainMenuName);
+    }
+
+    public void SaveInformation(int score, int point) {
+        PlayerPrefs.SetInt("highscore", score);
+        PlayerPrefs.SetInt("point", point);
     }
 }

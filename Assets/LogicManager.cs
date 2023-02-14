@@ -7,9 +7,10 @@ public class LogicManager : MonoBehaviour {
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI pointText;
     public int score = 0;
+    private int point = 0;
+
     private float timer = 0;
     private float timerLimit = 0.7f;
-    private int point = 0;
 
     public float floorMoveSpeed;
     public float speedLimit;
@@ -20,7 +21,11 @@ public class LogicManager : MonoBehaviour {
 
     public FloorSpawner floorSpawner;
 
-    void Start() {}
+    void Start() {
+        // score = PlayerPrefs.GetInt("highscore");
+        point = PlayerPrefs.GetInt("point");
+        pointText.text = point.ToString();
+    }
 
     void FixedUpdate() {
         if (timer < timerLimit) {
@@ -51,5 +56,13 @@ public class LogicManager : MonoBehaviour {
     public void AddPoint(int n) {
         point += n;
         pointText.text = point.ToString();
+    }
+
+    public int GetScore() {
+        return score;
+    }
+
+    public int GetPoint() {
+        return point;
     }
 }
