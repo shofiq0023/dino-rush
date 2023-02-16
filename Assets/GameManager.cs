@@ -2,12 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class GameManager : MonoBehaviour {
     [SerializeField] GameObject gameOverScreen;
     [SerializeField] GameObject pauseMenu;
     [SerializeField] PlayerScript playerScript;
     [SerializeField] string mainMenuName;
+    [SerializeField] TextMeshProUGUI meatCount;
+    [SerializeField] TextMeshProUGUI scoreCount;
+    [SerializeField] TextMeshProUGUI highScore;
 
     private void Awake() {
         Time.timeScale = 1;    
@@ -24,10 +28,18 @@ public class GameManager : MonoBehaviour {
     }
 
     public void GameOver(int score, int point) {
+        SaveInformation(score, point);
+        
+        int highestScore = PlayerPrefs.GetInt("highscore");
+
         gameOverScreen.SetActive(true);
         playerScript.ActiveDeath();
-        SaveInformation(score, point);
-        Debug.Log("Score: " + score + ", Point: " + point);
+
+        meatCount.text = point.ToString();
+        scoreCount.text = score.ToString();
+        highScore.text = highestScore.ToString();
+
+        Debug.Log("Score: " + score + ", Point: " + point + ", highscore: " + highestScore);
 
         Time.timeScale = 0;
     }
@@ -42,7 +54,10 @@ public class GameManager : MonoBehaviour {
     }
 
     public void SaveInformation(int score, int point) {
-        PlayerPrefs.SetInt("highscore", score);
+        if (score > PlayerPrefs.GetInt("highscore")) {
+            PlayerPrefs.SetInt("highscore", score);
+        }
+
         PlayerPrefs.SetInt("point", point);
     }
 }
