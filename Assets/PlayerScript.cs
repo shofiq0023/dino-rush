@@ -18,7 +18,10 @@ public class PlayerScript : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        if ((jumpCount < jumpLimit) && Input.GetKeyDown(KeyCode.Space) && Time.timeScale > 0 && !isDead) {
+        if ((jumpCount < jumpLimit) && 
+            ((Input.GetKeyDown(KeyCode.Space) || (Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Began))) && 
+            Time.timeScale > 0 && 
+            !isDead) {
             jump();
         }
     }
