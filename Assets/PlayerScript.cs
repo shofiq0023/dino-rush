@@ -10,6 +10,7 @@ public class PlayerScript : MonoBehaviour {
 
     [SerializeField] LayerMask groundLayer;
     [SerializeField] Transform feet;
+    [SerializeField] GameManager gameManager;
 
     private int jumpCount = 0;
 
@@ -23,6 +24,10 @@ public class PlayerScript : MonoBehaviour {
             Time.timeScale > 0 && 
             !isDead) {
             jump();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Escape)) {
+            gameManager.PauseGame();
         }
     }
 

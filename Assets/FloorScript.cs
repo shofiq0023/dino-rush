@@ -20,7 +20,7 @@ public class FloorScript : MonoBehaviour {
         speedLimit = logicManager.speedLimit;
 
         if (logicManager.score > scoreToSpawnFood) {
-            foodScript.SpawnFood(GetRandom());
+            foodScript.SpawnFood(GetRandom(6));
         }
 
         if (logicManager.score > scoreToSpawnEnemy) {
@@ -37,8 +37,8 @@ public class FloorScript : MonoBehaviour {
         }
     }
 
-    bool GetRandom() {
-        int rand = Random.Range(0, 10);
+    bool GetRandom(int max = 10) {
+        int rand = Random.Range(0, max);
 
         return rand % 2 == 0 ? true : false;
     }
