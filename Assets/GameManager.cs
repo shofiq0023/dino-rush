@@ -14,7 +14,8 @@ public class GameManager : MonoBehaviour {
     [SerializeField] TextMeshProUGUI highScore;
 
     private void Awake() {
-        Time.timeScale = 1;    
+        Time.timeScale = 1;
+        Application.targetFrameRate = 60;
     }
 
     public void PauseGame() {
