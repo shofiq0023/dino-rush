@@ -15,7 +15,7 @@ TagManager:
   - UI
   - Ground
   - Enemy
-  - 
+  - Transition
   - 
   - 
   - 
@@ -72,4 +72,7 @@ TagManager:
     locked: 0
   - name: UI
     uniqueID: 3277505887
+    locked: 0
+  - name: Transition
+    uniqueID: 2209758707
     locked: 0

@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour {
     [SerializeField] TextMeshProUGUI meatCount;
     [SerializeField] TextMeshProUGUI scoreCount;
     [SerializeField] TextMeshProUGUI highScore;
+    [SerializeField] Animator transition;
 
     private void Awake() {
         Time.timeScale = 1;
@@ -47,11 +48,11 @@ public class GameManager : MonoBehaviour {
 
     public void RestartGame() {
         Time.timeScale = 1;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void MainMenu() {
-        SceneManager.LoadScene(mainMenuName);
+        StartCoroutine(LoadMainMenu(0));
     }
 
     public void SaveInformation(int score, int point) {
@@ -60,5 +61,13 @@ public class GameManager : MonoBehaviour {
         }
 
         PlayerPrefs.SetInt("point", point);
+    }
+
+    IEnumerator LoadMainMenu(int index) {
+        transition.SetTrigger("Start");
+
+        yield return new WaitForSecondsRealtime(1);
+
+        SceneManager.LoadScene(index);
     }
 }
