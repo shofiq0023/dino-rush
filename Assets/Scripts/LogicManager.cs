@@ -22,7 +22,6 @@ public class LogicManager : MonoBehaviour {
     public FloorSpawner floorSpawner;
 
     void Start() {
-        // score = PlayerPrefs.GetInt("highscore");
         point = PlayerPrefs.GetInt("point");
         pointText.text = point.ToString();
     }

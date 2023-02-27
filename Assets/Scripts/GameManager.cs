@@ -41,8 +41,6 @@ public class GameManager : MonoBehaviour {
         scoreCount.text = score.ToString();
         highScore.text = highestScore.ToString();
 
-        Debug.Log("Score: " + score + ", Point: " + point + ", highscore: " + highestScore);
-
         Time.timeScale = 0;
     }
 

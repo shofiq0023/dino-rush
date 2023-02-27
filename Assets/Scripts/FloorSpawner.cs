@@ -11,8 +11,6 @@ public class FloorSpawner : MonoBehaviour
     [SerializeField] float spawnRate;
     [SerializeField] float heighOffset;
 
-    void Start() {}
-
     void FixedUpdate() {
         if(timer < spawnRate)
         {
