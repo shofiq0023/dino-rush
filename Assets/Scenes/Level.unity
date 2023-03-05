@@ -409,8 +409,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 812, y: -422}
-  m_SizeDelta: {x: 67.24, y: 68.163}
+  m_AnchoredPosition: {x: 789.2, y: -405.1}
+  m_SizeDelta: {x: 111.4919, y: 113.0223}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &112310730
 MonoBehaviour:
@@ -558,7 +558,7 @@ MonoBehaviour:
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1920, y: 1080}
-  m_ScreenMatchMode: 0
+  m_ScreenMatchMode: 1
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
@@ -574,7 +574,7 @@ Canvas:
   m_GameObject: {fileID: 121202373}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_Camera: {fileID: 519420031}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -583,7 +583,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
-  m_SortingLayerID: 0
+  m_SortingLayerID: -1017461409
   m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!224 &121202377
@@ -1329,6 +1329,7 @@ GameObject:
   - component: {fileID: 519420030}
   - component: {fileID: 519420034}
   - component: {fileID: 519420033}
+  - component: {fileID: 519420035}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1507,6 +1508,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!114 &519420035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b0fc2f5f62d16feaaa975e918a6fe87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetAspectRatio: 1.777778
+  cameraRef: {fileID: 519420031}
 --- !u!1001 &579197231
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2792,6 +2807,15 @@ MonoBehaviour:
   scoreCount: {fileID: 1446299454}
   highScore: {fileID: 868365544}
   transition: {fileID: 493766647}
+  soundClipArray:
+  - sound: 0
+    audioClip: {fileID: 8300000, guid: 009fa51e292b30b4bb55661e260c7c33, type: 3}
+  - sound: 1
+    audioClip: {fileID: 8300000, guid: 7bcc371bd1c439038a164c98f02836ec, type: 3}
+  - sound: 2
+    audioClip: {fileID: 8300000, guid: 4f8236c737f6a1252a5d347ad4a7234d, type: 3}
+  - sound: 3
+    audioClip: {fileID: 8300000, guid: 3eda3650ff812a35db45ab08810537d8, type: 3}
 --- !u!4 &1299874658
 Transform:
   m_ObjectHideFlags: 0
@@ -2799,7 +2823,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1299874656}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 458, y: 257.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -3502,7 +3526,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 74.254, y: 74.254}
+  m_SizeDelta: {x: 118.0894, y: 118.0894}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1524276665
 MonoBehaviour:

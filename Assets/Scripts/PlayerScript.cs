@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class PlayerScript : MonoBehaviour {
     public Rigidbody2D rb;
@@ -14,13 +15,15 @@ public class PlayerScript : MonoBehaviour {
 
     private int jumpCount = 0;
 
-    // Update is called once per frame
-    void Update() {
+    private void Update() {
         if ((jumpCount < jumpLimit) && 
             ((Input.GetKeyDown(KeyCode.Space) || (Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Began))) && 
             Time.timeScale > 0 && 
             !isDead) {
-            jump();
+                if (EventSystem.current.IsPointerOverGameObject()) {
+                    return;
+                }
+                jump();
         }
 
         if (Input.GetKeyDown(KeyCode.Escape)) {
@@ -28,9 +31,10 @@ public class PlayerScript : MonoBehaviour {
         }
     }
 
-    void jump() {
+    private void jump() {
         rb.velocity = Vector2.up * jumpPower;
         jumpCount++;
+        GameManager.PlaySound(GameManager.Sound.Jump);
     }
 
     public void ResetJump() {

@@ -41,6 +41,7 @@ public class LogicManager : MonoBehaviour {
         CheckScoreAndIncreaseSpeed();
     }
 
+    // Increasing speed after a certain score is achieved
     void CheckScoreAndIncreaseSpeed() {
         if ((score % scoreThresholdForSpdInc) == 0) {
             floorMoveSpeed += floorSpeedIncAmount;
@@ -63,5 +64,9 @@ public class LogicManager : MonoBehaviour {
 
     public int GetPoint() {
         return point;
+    }
+
+    public void PlayFoodSound() {
+        GameManager.PlaySound(GameManager.Sound.Meat);
     }
 }

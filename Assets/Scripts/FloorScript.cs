@@ -20,7 +20,7 @@ public class FloorScript : MonoBehaviour {
         speedLimit = logicManager.speedLimit;
 
         if (logicManager.score > scoreToSpawnFood) {
-            foodScript.SpawnFood(GetRandom(6));
+            foodScript.SpawnFood(GetRandom());
         }
 
         if (logicManager.score > scoreToSpawnEnemy) {

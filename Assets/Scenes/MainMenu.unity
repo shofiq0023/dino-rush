@@ -453,6 +453,7 @@ MonoBehaviour:
   playSceneName: Level
   transition: {fileID: 470212146}
   transitionTime: 1
+  audioClip: {fileID: 8300000, guid: 4f8236c737f6a1252a5d347ad4a7234d, type: 3}
 --- !u!4 &530041583
 Transform:
   m_ObjectHideFlags: 0
