@@ -2340,7 +2340,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floor: {fileID: 3326192299488640785, guid: 040ce83ae1c873a8dbaf84e931d8abe7, type: 3}
   spawnRate: 3
-  heighOffset: 0.34
+  heighOffset: 0.3
 --- !u!4 &901161579
 Transform:
   m_ObjectHideFlags: 0
