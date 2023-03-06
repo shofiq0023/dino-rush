@@ -17,6 +17,8 @@ public class MainMenuManager : MonoBehaviour {
     [SerializeField] private GameObject shopMenu;
     [SerializeField] private TextMeshProUGUI meatRequiredText;
     [SerializeField] private TextMeshProUGUI currentMeatText;
+    [SerializeField] private TextMeshProUGUI totalMeatCountText;
+    [SerializeField] private TextMeshProUGUI totalJumpCountText;
 
     private AudioSource audioSource;
     private int meatRequired;
@@ -32,6 +34,8 @@ public class MainMenuManager : MonoBehaviour {
         }
 
         meatRequired = PlayerPrefs.GetInt(MEAT_REQUIRED, 50);
+        totalMeatCountText.text = PlayerPrefs.GetInt(POINT).ToString();
+        totalJumpCountText.text = PlayerPrefs.GetInt(PLAYER_JUMP_COUNT).ToString();
     }
 
     public void Play() {
