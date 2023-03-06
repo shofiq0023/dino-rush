@@ -4,9 +4,11 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class PlayerScript : MonoBehaviour {
+    private const string PLAYER_JUMP_COUNT = "PlayerJumpCount";
+
     public Rigidbody2D rb;
     public float jumpPower = 10;
-    public int jumpLimit;
+    private int jumpLimit;
     private bool isDead = false;
 
     [SerializeField] LayerMask groundLayer;
@@ -14,6 +16,11 @@ public class PlayerScript : MonoBehaviour {
     [SerializeField] GameManager gameManager;
 
     private int jumpCount = 0;
+
+
+    private void Awake() {
+        jumpLimit = PlayerPrefs.GetInt(PLAYER_JUMP_COUNT);
+    }
 
     private void Update() {
         if ((jumpCount < jumpLimit) && 

@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 using TMPro;
 
 public class GameManager : MonoBehaviour {
+    private const string HIGHSCORE = "Highscore";
+    private const string POINT = "Point";
+
     [SerializeField] GameObject gameOverScreen;
     [SerializeField] GameObject pauseMenu;
     [SerializeField] PlayerScript playerScript;
@@ -82,7 +85,7 @@ public class GameManager : MonoBehaviour {
         PlaySound(Sound.Death);
         SaveInformation(score, point);
         
-        int highestScore = PlayerPrefs.GetInt("highscore");
+        int highestScore = PlayerPrefs.GetInt(HIGHSCORE);
 
         gameOverScreen.SetActive(true);
         playerScript.ActiveDeath();
@@ -96,11 +99,11 @@ public class GameManager : MonoBehaviour {
 
     // Saves player information like score and point
     public void SaveInformation(int score, int point) {
-        if (score > PlayerPrefs.GetInt("highscore")) {
-            PlayerPrefs.SetInt("highscore", score);
+        if (score > PlayerPrefs.GetInt(HIGHSCORE)) {
+            PlayerPrefs.SetInt(HIGHSCORE, score);
         }
 
-        PlayerPrefs.SetInt("point", point);
+        PlayerPrefs.SetInt(POINT, point);
     }
 
     // For loading level coroutine with delay

@@ -4,6 +4,8 @@ using UnityEngine;
 using TMPro;
 
 public class LogicManager : MonoBehaviour {
+    private const string POINT = "Point";
+    
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI pointText;
     public int score = 0;
@@ -22,7 +24,7 @@ public class LogicManager : MonoBehaviour {
     public FloorSpawner floorSpawner;
 
     void Start() {
-        point = PlayerPrefs.GetInt("point");
+        point = PlayerPrefs.GetInt(POINT);
         pointText.text = point.ToString();
     }
 
