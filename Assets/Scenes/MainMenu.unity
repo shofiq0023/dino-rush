@@ -742,7 +742,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -373, y: 56}
+  m_AnchoredPosition: {x: -589, y: 56}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &320288806
@@ -1220,7 +1220,7 @@ MonoBehaviour:
   playSceneName: Level
   transition: {fileID: 470212146}
   transitionTime: 1
-  audioClip: {fileID: 8300000, guid: 4f8236c737f6a1252a5d347ad4a7234d, type: 3}
+  audioClip: {fileID: 8300000, guid: 7f4a979a769bac9719cef2172fc07300, type: 3}
   shopMenu: {fileID: 1680095315}
   meatRequiredText: {fileID: 2007336109}
   currentMeatText: {fileID: 1289047662}
@@ -1407,7 +1407,7 @@ RectTransform:
   - {fileID: 2109905404}
   - {fileID: 1261598313}
   m_Father: {fileID: 906825189}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1913,8 +1913,8 @@ RectTransform:
   - {fileID: 690170909}
   - {fileID: 1617447196}
   - {fileID: 1133390451}
-  - {fileID: 1680095316}
   - {fileID: 630927646}
+  - {fileID: 1680095316}
   - {fileID: 470212142}
   m_Father: {fileID: 0}
   m_RootOrder: 7
@@ -3497,7 +3497,7 @@ RectTransform:
   - {fileID: 1909499394}
   - {fileID: 1098600580}
   m_Father: {fileID: 906825189}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -4108,7 +4108,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -509, y: 49}
+  m_AnchoredPosition: {x: -436, y: 49}
   m_SizeDelta: {x: 151.3, y: 87.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2007336109

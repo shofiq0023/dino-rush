@@ -2813,9 +2813,9 @@ MonoBehaviour:
   - sound: 1
     audioClip: {fileID: 8300000, guid: 7bcc371bd1c439038a164c98f02836ec, type: 3}
   - sound: 2
-    audioClip: {fileID: 8300000, guid: 4f8236c737f6a1252a5d347ad4a7234d, type: 3}
+    audioClip: {fileID: 8300000, guid: 7f4a979a769bac9719cef2172fc07300, type: 3}
   - sound: 3
-    audioClip: {fileID: 8300000, guid: 3eda3650ff812a35db45ab08810537d8, type: 3}
+    audioClip: {fileID: 8300000, guid: f1e4d046872c0284980e1664ba4298ef, type: 3}
 --- !u!4 &1299874658
 Transform:
   m_ObjectHideFlags: 0
@@ -3872,7 +3872,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 1643682955}
   jumpPower: 3
-  jumpLimit: 2
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
