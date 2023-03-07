@@ -29,23 +29,28 @@ public class MainMenuManager : MonoBehaviour {
         GameObject soundGameObject = new GameObject("Sound");
         audioSource = soundGameObject.AddComponent<AudioSource>();
         
+        // To show the jump count in main menu
         if (PlayerPrefs.GetInt(PLAYER_JUMP_COUNT) < 2) {
             PlayerPrefs.SetInt(PLAYER_JUMP_COUNT, 2);
         }
 
+        // Set the required meat in shop menu and show the current jump and meat count in main menu
         meatRequired = PlayerPrefs.GetInt(MEAT_REQUIRED, 50);
         totalMeatCountText.text = PlayerPrefs.GetInt(POINT).ToString();
         totalJumpCountText.text = PlayerPrefs.GetInt(PLAYER_JUMP_COUNT).ToString();
     }
 
+    // Play button
     public void Play() {
         StartCoroutine(LoadLevel(1));
     }
 
+    // Quit button
     public void Quit() {
         Application.Quit();
     }
 
+    // Function to load level
     IEnumerator LoadLevel(int levelIndex) {
         audioSource.PlayOneShot(audioClip);
         transition.SetTrigger("Start");
@@ -55,6 +60,7 @@ public class MainMenuManager : MonoBehaviour {
         SceneManager.LoadScene(levelIndex);
     }
 
+    // Shop menu button
     public void ShopButton() {
         audioSource.PlayOneShot(audioClip);
         shopMenu.SetActive(true);
@@ -66,11 +72,13 @@ public class MainMenuManager : MonoBehaviour {
         }
     }
 
+    // Back button in Shop menu
     public void ShopButtonBack() {
         audioSource.PlayOneShot(audioClip);
         shopMenu.SetActive(false);
     }
 
+    // Buy jump button in Shop menu
     public void BuyJump() {
         if (CanBuyJump()) {
             audioSource.PlayOneShot(audioClip);

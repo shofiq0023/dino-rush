@@ -10,6 +10,7 @@ public class FoodScript : MonoBehaviour {
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
+        // Layer 3 == Player
         if (other.gameObject.layer == 3) {
             logicManager.AddPoint(1);
             logicManager.PlayFoodSound();

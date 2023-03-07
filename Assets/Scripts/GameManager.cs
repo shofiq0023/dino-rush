@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour {
 
     public SoundClips[] soundClipArray;
 
+
     private void Awake() {
         Time.timeScale = 1;
         Application.targetFrameRate = 60;

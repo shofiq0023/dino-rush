@@ -7,7 +7,6 @@ public class Parallax : MonoBehaviour {
 
     private float singleTextureWidth;
 
-    // Start is called before the first frame update
     void Start() {
         SetupTexture();
         moveSpeed = -moveSpeed;
@@ -29,7 +28,6 @@ public class Parallax : MonoBehaviour {
         }
     }
 
-    // Update is called once per frame
     void Update() {
         Scroll();
         CheckReset();

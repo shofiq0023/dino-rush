@@ -30,7 +30,7 @@ public class PlayerScript : MonoBehaviour {
                 if (EventSystem.current.IsPointerOverGameObject()) {
                     return;
                 }
-                jump();
+                Jump();
         }
 
         if (Input.GetKeyDown(KeyCode.Escape)) {
@@ -38,7 +38,7 @@ public class PlayerScript : MonoBehaviour {
         }
     }
 
-    private void jump() {
+    private void Jump() {
         rb.velocity = Vector2.up * jumpPower;
         jumpCount++;
         GameManager.PlaySound(GameManager.Sound.Jump);

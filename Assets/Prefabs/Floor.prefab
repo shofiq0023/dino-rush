@@ -196,7 +196,7 @@ MonoBehaviour:
   foodScript: {fileID: 8663956996619020098}
   enemyScript: {fileID: 3379995450419470344}
   scoreToSpawnFood: 10
-  scoreToSpawnEnemy: 10
+  scoreToSpawnEnemy: 3
 --- !u!1 &3326192301067013088
 GameObject:
   m_ObjectHideFlags: 0

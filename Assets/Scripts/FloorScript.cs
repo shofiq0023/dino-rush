@@ -13,7 +13,6 @@ public class FloorScript : MonoBehaviour {
     private float speedLimit;
     private LogicManager logicManager;
 
-    // Start is called before the first frame update
     void Start() {
         logicManager = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicManager>();
         moveSpeed = logicManager.floorMoveSpeed;
@@ -28,7 +27,6 @@ public class FloorScript : MonoBehaviour {
         }
     }
 
-    // Update is called once per frame
     void Update() {
         transform.position = transform.position + (Vector3.left * moveSpeed) * Time.deltaTime;
 
