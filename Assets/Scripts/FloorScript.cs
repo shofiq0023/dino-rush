@@ -12,7 +12,7 @@ public class FloorScript : MonoBehaviour {
     private float speedLimit;
     private LogicManager logicManager;
 
-    void Start() {
+    public void Init() {
         logicManager = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicManager>();
         moveSpeed = logicManager.floorMoveSpeed;
         speedLimit = logicManager.speedLimit;

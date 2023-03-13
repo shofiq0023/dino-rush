@@ -2,8 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FloorSpawner : MonoBehaviour
-{
+public class FloorSpawner : MonoBehaviour {
     private FloorObjPooler floorObjPooler;
 
     private void Start() {
@@ -15,13 +14,11 @@ public class FloorSpawner : MonoBehaviour
     [SerializeField] float spawnRate;
     [SerializeField] float heighOffset;
 
-    void FixedUpdate() {
-        if(timer < spawnRate)
-        {
+    private void FixedUpdate() {
+        if(timer < spawnRate) {
             timer += Time.deltaTime;
         }
-        else
-        {
+        else {
             Spawn();
             timer = 0;
         }
