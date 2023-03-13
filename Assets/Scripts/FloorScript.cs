@@ -9,7 +9,6 @@ public class FloorScript : MonoBehaviour {
     [SerializeField] int scoreToSpawnEnemy;
 
     private float moveSpeed;
-    private float deadZone = -5;
     private float speedLimit;
     private LogicManager logicManager;
 
@@ -29,10 +28,6 @@ public class FloorScript : MonoBehaviour {
 
     void Update() {
         transform.position = transform.position + (Vector3.left * moveSpeed) * Time.deltaTime;
-
-        if (transform.position.x < deadZone) {
-            Destroy(gameObject);
-        }
     }
 
     bool GetRandom(int max = 10) {

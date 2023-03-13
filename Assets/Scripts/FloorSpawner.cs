@@ -4,7 +4,11 @@ using UnityEngine;
 
 public class FloorSpawner : MonoBehaviour
 {
-    public GameObject floor;
+    private FloorObjPooler floorObjPooler;
+
+    private void Start() {
+        floorObjPooler = FloorObjPooler.Instance;
+    }
 
     private float timer = 0;
 
@@ -27,7 +31,7 @@ public class FloorSpawner : MonoBehaviour
         float highestPoint = transform.position.y - heighOffset;
         float lowestPoint = transform.position.y + heighOffset;
 
-        Instantiate(floor, new Vector3(transform.position.x, Random.Range(lowestPoint, highestPoint), 0), gameObject.transform.rotation);
+        floorObjPooler.SpawnFromPool(new Vector3(transform.position.x, Random.Range(lowestPoint, highestPoint), 0));
     }
 
     public void DecreaseSpawnRate(float rate) {

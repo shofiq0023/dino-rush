@@ -27,9 +27,6 @@ public class PlayerScript : MonoBehaviour {
             ((Input.GetKeyDown(KeyCode.Space) || (Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Began))) && 
             Time.timeScale > 0 && 
             !isDead) {
-                if (EventSystem.current.IsPointerOverGameObject(Input.touches[0].fingerId)) {
-                    return;
-                }
                 Jump();
         }
 
