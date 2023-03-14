@@ -7,7 +7,7 @@ public class ShopManager : MonoBehaviour {
     private const string PLAYER_JUMP_COUNT = "PlayerJumpCount";
     private const string POINT = "Point";
     private const string MEAT_REQUIRED = "MeatRequired";
-    private const int firstTimeMeatRequirement = 5;
+    private const int firstTimeMeatRequirement = 50;
     private const int meatRequirementIncrementCount = 10;
     
     [SerializeField] private AudioSource audioSource;
