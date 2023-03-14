@@ -11,8 +11,9 @@ public class FloorScript : MonoBehaviour {
     private float moveSpeed;
     private float speedLimit;
     private LogicManager logicManager;
+    private float deadZone = -5;
 
-    void Start() {
+    private void Start() {
         logicManager = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicManager>();
         moveSpeed = logicManager.floorMoveSpeed;
         speedLimit = logicManager.speedLimit;
@@ -26,8 +27,13 @@ public class FloorScript : MonoBehaviour {
         }
     }
 
+
     void Update() {
         transform.position = transform.position + (Vector3.left * moveSpeed) * Time.deltaTime;
+
+        if (transform.position.x < deadZone) {
+            Destroy(gameObject);
+        }
     }
 
     bool GetRandom(int max = 10) {

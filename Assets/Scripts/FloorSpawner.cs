@@ -2,26 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FloorSpawner : MonoBehaviour
-{
-    private FloorObjPooler floorObjPooler;
-
-    private void Start() {
-        floorObjPooler = FloorObjPooler.Instance;
-    }
+public class FloorSpawner : MonoBehaviour {
+    [SerializeField] private float spawnRate;
+    [SerializeField] float heighOffset;
+    [SerializeField] private GameObject floorPrefab;
 
     private float timer = 0;
 
-    [SerializeField] float spawnRate;
-    [SerializeField] float heighOffset;
-
-    void FixedUpdate() {
-        if(timer < spawnRate)
-        {
+    private void FixedUpdate() {
+        if(timer < spawnRate) {
             timer += Time.deltaTime;
         }
-        else
-        {
+        else {
             Spawn();
             timer = 0;
         }
@@ -31,7 +23,7 @@ public class FloorSpawner : MonoBehaviour
         float highestPoint = transform.position.y - heighOffset;
         float lowestPoint = transform.position.y + heighOffset;
 
-        floorObjPooler.SpawnFromPool(new Vector3(transform.position.x, Random.Range(lowestPoint, highestPoint), 0));
+        Instantiate(floorPrefab, new Vector3(transform.position.x, Random.Range(lowestPoint, highestPoint), 0), gameObject.transform.rotation);
     }
 
     public void DecreaseSpawnRate(float rate) {
