@@ -15,6 +15,7 @@ public class MainMenuManager : MonoBehaviour {
     [SerializeField] private float transitionTime = 1;
     [SerializeField] private AudioClip audioClip;
     [SerializeField] private GameObject shopMenu;
+    [SerializeField] private GameObject tutorialScreen;
     [SerializeField] private TextMeshProUGUI meatRequiredText;
     [SerializeField] private TextMeshProUGUI currentMeatText;
     [SerializeField] private TextMeshProUGUI totalMeatCountText;
@@ -58,6 +59,10 @@ public class MainMenuManager : MonoBehaviour {
         yield return new WaitForSeconds(transitionTime);
 
         SceneManager.LoadScene(levelIndex);
+    }
+
+    public void StartButton() {
+        tutorialScreen.SetActive(true);
     }
 
     // Shop menu button
